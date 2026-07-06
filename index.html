@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="제20회 철원 화강 다슬기축제 중앙대학교 외국인 유학생 초청 행사 참가자 정보 정리 페이지" />
+  <title>중앙대 외국인 유학생 초청 행사 참가자 정보</title>
+  <style>
+    :root {
+      --navy:#102B5D;
+      --blue:#1D5DA8;
+      --teal:#168B94;
+      --mint:#E9FAFA;
+      --pink:#E63F7A;
+      --yellow:#FFE55C;
+      --orange:#FFB236;
+      --bg:#F5F8FC;
+      --card:#FFFFFF;
+      --ink:#182338;
+      --muted:#667085;
+      --line:#DDE6F1;
+      --danger:#D92D20;
+      --ok:#027A48;
+      --shadow:0 18px 50px rgba(16,43,93,.12);
+      --radius:22px;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", Arial, sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(22,139,148,.18), transparent 34rem),
+        radial-gradient(circle at top right, rgba(230,63,122,.12), transparent 30rem),
+        linear-gradient(180deg, #fff 0%, var(--bg) 42%, #fff 100%);
+      line-height:1.55;
+    }
+    a { color:inherit; }
+    .wrap { width:min(1180px, calc(100% - 32px)); margin:0 auto; }
+    header { padding:34px 0 18px; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:900; letter-spacing:-.04em; color:var(--navy); }
+    .brand-mark { width:44px; height:44px; border-radius:14px; display:grid; place-items:center; background:linear-gradient(135deg,var(--navy),var(--teal)); color:white; box-shadow:0 10px 20px rgba(16,43,93,.22); }
+    .brand small { display:block; font-weight:700; color:var(--muted); letter-spacing:-.02em; margin-top:1px; }
+    .navlinks { display:flex; gap:8px; flex-wrap:wrap; }
+    .navlinks a { text-decoration:none; padding:9px 13px; border:1px solid var(--line); border-radius:999px; background:rgba(255,255,255,.72); color:#344054; font-size:14px; font-weight:800; }
+    .hero { padding:20px 0 28px; }
+    .hero-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:28px; align-items:center; }
+    .hero-card { background:rgba(255,255,255,.86); border:1px solid rgba(221,230,241,.9); border-radius:32px; padding:34px; box-shadow:var(--shadow); backdrop-filter: blur(12px); overflow:hidden; position:relative; }
+    .hero-card:after { content:""; position:absolute; right:-70px; top:-80px; width:220px; height:220px; background:rgba(22,139,148,.10); border-radius:999px; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border-radius:999px; background:var(--mint); color:#087078; font-weight:900; letter-spacing:-.03em; margin-bottom:16px; }
+    h1 { position:relative; margin:0; color:var(--navy); font-size:clamp(31px, 5vw, 58px); line-height:1.05; letter-spacing:-.07em; font-weight:950; }
+    .hero-sub { position:relative; margin:18px 0 0; color:#344054; font-size:18px; font-weight:800; letter-spacing:-.03em; }
+    .summary { position:relative; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:26px 0 0; }
+    .summary .item { border:1px solid var(--line); border-radius:18px; padding:15px; background:#fff; min-height:84px; }
+    .summary .label { font-size:12px; color:var(--muted); font-weight:900; text-transform:uppercase; letter-spacing:.03em; }
+    .summary .value { margin-top:5px; font-size:17px; color:var(--ink); font-weight:950; letter-spacing:-.04em; }
+    .summary .item.apply-period { grid-column:1 / -1; background:linear-gradient(135deg,#FFF7D6,#FFFFFF); border-color:#FFE08A; }
+    .summary .item.apply-period .value { color:#9A6200; }
+    .fee-box { position:relative; margin-top:16px; border-radius:22px; padding:18px 20px; background:linear-gradient(135deg,var(--pink),#C9286B); color:#fff; display:flex; justify-content:space-between; gap:16px; align-items:center; box-shadow:0 16px 30px rgba(230,63,122,.20); }
+    .fee-box span { font-weight:900; opacity:.9; }
+    .fee-box strong { font-size:28px; color:var(--yellow); letter-spacing:-.04em; }
+    .poster { background:#fff; border:1px solid var(--line); border-radius:28px; padding:12px; box-shadow:var(--shadow); }
+    .poster-preview { border-radius:22px; overflow:hidden; background:linear-gradient(180deg,#F7FBFF 0%, #FFFFFF 100%); border:1px solid #DCE7F3; }
+    .poster-head { padding:22px 22px 14px; background:linear-gradient(135deg,#FFFFFF 0%, #EAF7F6 48%, #EFF4FF 100%); }
+    .poster-top { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:12px; }
+    .mini-chip { display:inline-flex; align-items:center; padding:7px 12px; border-radius:999px; background:var(--navy); color:#fff; font-size:11px; font-weight:950; letter-spacing:.02em; }
+    .mini-badge { display:inline-flex; align-items:center; padding:7px 11px; border-radius:999px; background:var(--pink); color:#fff; font-size:11px; font-weight:950; letter-spacing:-.02em; }
+    .poster-preview h3 { margin:0; color:var(--navy); font-size:26px; line-height:1.15; letter-spacing:-.06em; }
+    .poster-sub { margin:10px 0 0; color:#087078; font-size:13px; font-weight:900; line-height:1.45; }
+    .poster-meta { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; padding:16px 18px 6px; }
+    .poster-meta div { background:#fff; border:1px solid #DCE7F3; border-radius:16px; padding:12px; min-height:82px; }
+    .poster-meta b { display:block; color:#667085; font-size:11px; font-weight:950; text-transform:uppercase; letter-spacing:.04em; }
+    .poster-meta span { display:block; margin-top:7px; color:var(--ink); font-size:14px; font-weight:900; line-height:1.35; letter-spacing:-.03em; }
+    .poster-picks { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; padding:10px 18px 18px; }
+    .poster-picks .pick { border-radius:16px; padding:14px; color:#fff; min-height:92px; }
+    .poster-picks .pick b { display:block; font-size:12px; opacity:.92; letter-spacing:.03em; }
+    .poster-picks .pick span { display:block; margin-top:10px; font-size:15px; font-weight:950; line-height:1.3; letter-spacing:-.03em; }
+    .poster-picks .water { background:linear-gradient(135deg,#2B77FF,#19A8FF); }
+    .poster-picks .summer { background:linear-gradient(135deg,#0DA19A,#4DD8C9); }
+    .poster-picks .local { background:linear-gradient(135deg,#FFB100,#FF8A00); }
+    .poster-picks .chill { background:linear-gradient(135deg,#E63F7A,#FF7A9B); }
+    .poster-foot { display:flex; justify-content:space-between; gap:10px; align-items:center; padding:0 18px 18px; }
+    .poster-foot .foot-note { color:#667085; font-size:12px; font-weight:800; line-height:1.5; }
+    .poster-foot .fee-pill { display:inline-flex; align-items:center; justify-content:center; white-space:nowrap; padding:10px 14px; border-radius:999px; background:#FFE166; color:#7A4F00; font-size:14px; font-weight:950; }
+    @media (max-width:700px) { .poster-meta, .poster-picks { grid-template-columns:1fr; } .poster-foot { flex-direction:column; align-items:flex-start; } }
+    .notice { margin:22px 0 0; border-left:6px solid var(--teal); background:#fff; padding:16px 18px; border-radius:16px; color:#344054; box-shadow:0 8px 26px rgba(16,43,93,.07); }
+    .section { padding:24px 0; }
+    .section-title { display:flex; align-items:end; justify-content:space-between; gap:16px; margin:0 0 15px; }
+    .section-title h2 { margin:0; color:var(--navy); font-size:28px; letter-spacing:-.06em; }
+    .section-title p { margin:0; color:var(--muted); font-size:14px; font-weight:700; }
+    .cards { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+    .program-card { background:#fff; border:1px solid var(--line); border-radius:20px; padding:18px; min-height:134px; box-shadow:0 10px 28px rgba(16,43,93,.06); }
+    .program-card .tag { display:inline-block; font-size:12px; font-weight:950; color:#fff; background:var(--blue); padding:5px 9px; border-radius:999px; }
+    .program-card h3 { margin:12px 0 6px; font-size:18px; letter-spacing:-.05em; color:var(--navy); }
+    .program-card p { margin:0; color:#667085; font-size:14px; font-weight:700; }
+    .form-shell { display:grid; grid-template-columns:1fr 360px; gap:22px; align-items:start; }
+    form { background:#fff; border:1px solid var(--line); border-radius:28px; padding:24px; box-shadow:var(--shadow); }
+    fieldset { border:0; margin:0; padding:0; }
+    fieldset + fieldset { margin-top:30px; padding-top:26px; border-top:1px dashed var(--line); }
+    legend { display:flex; align-items:center; gap:9px; margin:0 0 18px; font-size:20px; font-weight:950; color:var(--navy); letter-spacing:-.05em; }
+    .num { width:30px; height:30px; border-radius:10px; display:grid; place-items:center; color:#fff; font-size:14px; background:linear-gradient(135deg,var(--blue),var(--teal)); }
+    .grid-2 { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; }
+    .grid-3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:15px; }
+    .field { display:flex; flex-direction:column; gap:7px; }
+    label { font-size:14px; font-weight:900; color:#344054; letter-spacing:-.02em; }
+    label .en { display:block; font-size:11px; font-weight:800; color:#98A2B3; letter-spacing:0; margin-top:1px; }
+    .req { color:var(--pink); margin-left:3px; }
+    input, select, textarea {
+      width:100%; border:1px solid #CAD6E4; background:#fff; border-radius:14px; padding:13px 14px; font:inherit; color:var(--ink); outline:none; transition:.15s; min-height:48px;
+    }
+    textarea { resize:vertical; min-height:100px; }
+    input:focus, select:focus, textarea:focus { border-color:var(--teal); box-shadow:0 0 0 4px rgba(22,139,148,.13); }
+    .hint { font-size:12px; color:#667085; font-weight:700; margin-top:3px; }
+    .checks { display:grid; gap:10px; }
+    .check { display:flex; align-items:flex-start; gap:10px; padding:14px; border:1px solid var(--line); border-radius:16px; background:#F9FBFE; }
+    .check input { width:20px; min-height:20px; height:20px; margin-top:2px; accent-color:var(--teal); }
+    .check label { font-size:14px; line-height:1.45; }
+    .check p { margin:5px 0 0; font-size:12px; color:#667085; font-weight:700; }
+    .privacy-box { margin-top:12px; padding:16px; border-radius:16px; background:#FFF7E6; border:1px solid #FEDF89; color:#5F3D00; font-size:13px; font-weight:700; }
+    .privacy-box strong { color:#7A4D00; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }
+    button { border:0; border-radius:15px; padding:13px 18px; font:inherit; font-weight:950; cursor:pointer; transition:.15s; }
+    .primary { background:linear-gradient(135deg,var(--navy),var(--blue)); color:#fff; box-shadow:0 10px 22px rgba(16,43,93,.20); }
+    .secondary { background:#EEF4FF; color:var(--navy); border:1px solid #C7D7FE; }
+    .ghost { background:#fff; color:#344054; border:1px solid var(--line); }
+    button:hover { transform:translateY(-1px); }
+    .side { display:grid; gap:14px; position:sticky; top:16px; }
+    .side-card { background:#fff; border:1px solid var(--line); border-radius:24px; padding:20px; box-shadow:0 10px 28px rgba(16,43,93,.07); }
+    .side-card h3 { margin:0 0 10px; color:var(--navy); font-size:20px; letter-spacing:-.05em; }
+    .account { background:linear-gradient(135deg,#132E63,#17477F); color:#fff; }
+    .account .bank { font-size:13px; opacity:.86; font-weight:800; }
+    .account .num-text { margin:8px 0; font-size:23px; font-weight:950; letter-spacing:-.02em; }
+    .account .holder { font-size:14px; font-weight:900; color:#D7E9FF; }
+    .pill-list { display:flex; flex-wrap:wrap; gap:7px; }
+    .pill { padding:7px 10px; border-radius:999px; background:#F2F4F7; color:#475467; font-size:12px; font-weight:900; }
+    .timeline { display:grid; gap:8px; }
+    .time-row { display:grid; grid-template-columns:82px 1fr; gap:10px; padding:10px 0; border-bottom:1px solid #EEF2F6; }
+    .time-row:last-child { border-bottom:0; }
+    .time { color:var(--teal); font-weight:950; font-size:13px; }
+    .time-title { font-weight:900; color:#344054; font-size:13px; }
+    #resultPanel { display:none; margin-top:22px; padding:20px; border-radius:22px; background:#F8FCFF; border:1px solid #B8E3EA; }
+    #resultPanel h3 { margin:0 0 10px; color:var(--navy); letter-spacing:-.04em; }
+    #resultText { width:100%; min-height:280px; font-family:"SFMono-Regular",Consolas,monospace; font-size:13px; background:#fff; }
+    .toast { position:fixed; left:50%; bottom:24px; transform:translateX(-50%) translateY(20px); background:#101828; color:#fff; padding:12px 16px; border-radius:14px; font-weight:900; box-shadow:0 18px 40px rgba(0,0,0,.22); opacity:0; pointer-events:none; transition:.2s; z-index:50; }
+    .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+    footer { padding:36px 0 52px; color:#667085; font-size:13px; text-align:center; }
+    .small-alert { display:flex; gap:10px; align-items:flex-start; background:#FEF3F2; border:1px solid #FECDCA; color:#912018; padding:14px; border-radius:16px; font-size:13px; font-weight:800; }
+    @media (max-width: 980px) {
+      .hero-grid, .form-shell { grid-template-columns:1fr; }
+      .side { position:static; }
+      .cards { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+    @media (max-width: 640px) {
+      .wrap { width:min(100% - 22px, 1180px); }
+      header { padding-top:18px; }
+      .hero-card, form { padding:20px; border-radius:24px; }
+      .summary, .grid-2, .grid-3, .cards { grid-template-columns:1fr; }
+      .fee-box { align-items:flex-start; flex-direction:column; }
+      .navlinks { display:none; }
+      h1 { font-size:34px; }
+      .hero-sub { font-size:16px; }
+    }
+    @media print {
+      body { background:#fff; }
+      .navlinks, .poster, .actions, footer, .toast { display:none !important; }
+      .wrap { width:100%; }
+      .hero-card, form, .side-card { box-shadow:none; }
+      .form-shell { grid-template-columns:1fr; }
+      .side { position:static; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="brand-mark">水</div>
+        <div>
+          중앙대 외국인 유학생 초청 행사
+          <small>시니어스포츠산업진흥원 참가자 정보 정리 페이지</small>
+        </div>
+      </div>
+      <nav class="navlinks" aria-label="페이지 이동">
+        <a href="#info">행사정보</a>
+        <a href="#form">참가자정보</a>
+        <a href="#privacy">동의사항</a>
+        <a href="#account">입금계좌</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap" id="info">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <div class="eyebrow">ALL IN ONE SUMMER PICK</div>
+          <h1>중앙대학교<br>외국인 유학생을<br>초대합니다</h1>
+          <p class="hero-sub">제20회 철원 화강 다슬기축제 중앙대학교 외국인 유학생 초청 행사</p>
+          <div class="summary">
+            <div class="item">
+              <div class="label">Event Date</div>
+              <div class="value">2026. 7. 31.(금)<br>09:00 ~ 17:30</div>
+            </div>
+            <div class="item apply-period">
+              <div class="label">접수기간 / Application Period</div>
+              <div class="value">2026. 07. 06.(월) ~ 07. 20.(월)</div>
+            </div>
+            <div class="item">
+              <div class="label">Place</div>
+              <div class="value">철원군 화강<br>축제장</div>
+            </div>
+            <div class="item">
+              <div class="label">Organizer</div>
+              <div class="value">시니어스포츠<br>산업진흥원</div>
+            </div>
+            <div class="item">
+              <div class="label">For</div>
+              <div class="value">중앙대<br>외국인 유학생</div>
+            </div>
+          </div>
+          <div class="fee-box">
+            <span>참가비 / Participation Fee</span>
+            <strong>15,000원</strong>
+          </div>
+          <div class="notice">
+            접수기간은 <b>2026. 07. 06.(월) ~ 07. 20.(월)</b>입니다.
+            입력하신 정보는 행사 운영, 참가 확인, 차량 탑승 안내, 안전관리 및 참가비 확인을 위해 사용되며, 작성 완료 시 구글 스프레드시트 저장 요청이 전송됩니다.
+          </div>
+        </div>
+        <aside class="poster" aria-label="행사 포스터 미리보기">
+          <div class="poster-preview">
+            <div class="poster-head">
+              <div class="poster-top">
+                <span class="mini-chip">ALL IN ONE SUMMER PICK</span>
+                <span class="mini-badge">중앙대학교 초청</span>
+              </div>
+              <h3>중앙대학교 외국인 유학생을 초대합니다</h3>
+              <p class="poster-sub">제20회 철원 화강 다슬기축제 중앙대학교 국제교류원 초청 행사</p>
+            </div>
+            <div class="poster-meta">
+              <div>
+                <b>DATE</b>
+                <span>2026. 7. 31.(금)<br>09:00 ~ 17:30</span>
+              </div>
+              <div>
+                <b>PLACE</b>
+                <span>철원군 화강<br>축제장</span>
+              </div>
+              <div>
+                <b>FEE</b>
+                <span>참가비<br>15,000원</span>
+              </div>
+            </div>
+            <div class="poster-picks">
+              <div class="pick water">
+                <b>WATER PICK</b>
+                <span>워터 프로그램<br>체험 & 레이스</span>
+              </div>
+              <div class="pick summer">
+                <b>SUMMER PICK</b>
+                <span>EDM 워터 스테이지<br>DJ PICK FESTA</span>
+              </div>
+              <div class="pick local">
+                <b>LOCAL PICK</b>
+                <span>철원 로컬 체험과<br>축제 프로그램</span>
+              </div>
+              <div class="pick chill">
+                <b>CHILL PICK</b>
+                <span>자유 관람 &<br>현장 이벤트</span>
+              </div>
+            </div>
+            <div class="poster-foot">
+              <div class="foot-note">중앙대 외국인 유학생 대상 안내용 미리보기입니다.<br>상세 일정과 신청 내용은 아래 신청서 기준으로 접수됩니다.</div>
+              <div class="fee-pill">접수기간 07/06 ~ 07/20</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="section-title">
+        <h2>주요 프로그램</h2>
+        <p>Program Highlights</p>
+      </div>
+      <div class="cards">
+        <article class="program-card">
+          <span class="tag">WATER PICK</span>
+          <h3>화강 수상 어트랙션</h3>
+          <p>카약, 카누, 패들보드, 제트스키 등 수상 체험 프로그램</p>
+        </article>
+        <article class="program-card">
+          <span class="tag" style="background:var(--pink)">SUMMER PICK</span>
+          <h3>20th Birth SPLASH</h3>
+          <p>다슬·다정이의 생일 파티 콘셉트 주간 대표 프로그램</p>
+        </article>
+        <article class="program-card">
+          <span class="tag" style="background:var(--teal)">DJ PICK</span>
+          <h3>EDM 워터 스테이지</h3>
+          <p>썸머 DJ PICK 페스타, 야간 무대·워터 시스템</p>
+        </article>
+        <article class="program-card">
+          <span class="tag" style="background:var(--orange)">LOCAL PICK</span>
+          <h3>축제장 자유 관람</h3>
+          <p>한탄강 및 화강 다슬기축제 현장 관람</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="form">
+      <div class="section-title">
+        <h2>참가자 정보 입력</h2>
+        <p>Participant Information</p>
+      </div>
+      <div class="form-shell">
+        <form id="participantForm" autocomplete="on">
+          <input type="hidden" name="접수기간" value="2026. 07. 06.(월) ~ 07. 20.(월)" />
+          <div class="small-alert">
+            <span>!</span>
+            <div>주민등록번호, 외국인등록번호, 여권번호 등 고유식별정보는 입력하지 마세요. 행사 운영에 필요한 최소 정보만 받습니다.</div>
+          </div>
+
+          <fieldset>
+            <legend><span class="num">1</span>기본 인적사항</legend>
+            <div class="grid-2">
+              <div class="field">
+                <label for="nameKo">성명<span class="req">*</span><span class="en">Full name in Korean or native language</span></label>
+                <input id="nameKo" name="성명" required placeholder="예: 김민수 / Amina Khan" />
+              </div>
+              <div class="field">
+                <label for="nameEn">영문명<span class="en">English name, optional</span></label>
+                <input id="nameEn" name="영문명" placeholder="예: AMINA KHAN" />
+              </div>
+              <div class="field">
+                <label for="birth">생년월일<span class="req">*</span><span class="en">Date of birth</span></label>
+                <input id="birth" name="생년월일" type="date" required />
+              </div>
+              <div class="field">
+                <label for="gender">성별<span class="req">*</span><span class="en">Gender</span></label>
+                <select id="gender" name="성별" required>
+                  <option value="">선택</option>
+                  <option>여성</option>
+                  <option>남성</option>
+                  <option>기타/응답하지 않음</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="nationality">국적<span class="req">*</span><span class="en">Nationality</span></label>
+                <input id="nationality" name="국적" required placeholder="예: Vietnam, Mongolia, China" />
+              </div>
+              <div class="field">
+                <label for="phone">연락처<span class="req">*</span><span class="en">Mobile phone</span></label>
+                <input id="phone" name="연락처" required inputmode="tel" placeholder="010-0000-0000" />
+              </div>
+              <div class="field">
+                <label for="email">이메일<span class="req">*</span><span class="en">Email</span></label>
+                <input id="email" name="이메일" type="email" required placeholder="example@email.com" />
+              </div>
+              <div class="field">
+                <label for="school">소속/학교<span class="req">*</span><span class="en">School / Affiliation</span></label>
+                <input id="school" name="소속/학교" required value="중앙대학교" />
+              </div>
+              <div class="field">
+                <label for="major">학과/전공<span class="en">Department / Major</span></label>
+                <input id="major" name="학과/전공" placeholder="예: 국제교육원 / 한국어과정" />
+              </div>
+              <div class="field">
+                <label for="studentId">학번 또는 과정명<span class="en">Student ID or course, optional</span></label>
+                <input id="studentId" name="학번/과정" placeholder="선택 입력" />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="num">2</span>이동·안전 확인</legend>
+            <div class="grid-2">
+              <div class="field">
+                <label for="bus">단체 버스 탑승 여부<span class="req">*</span><span class="en">Group bus</span></label>
+                <select id="bus" name="버스 탑승" required>
+                  <option value="">선택</option>
+                  <option>탑승 예정</option>
+                  <option>개별 이동</option>
+                  <option>미정</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="pickup">집결/탑승 장소<span class="en">Meeting point</span></label>
+                <input id="pickup" name="집결/탑승 장소" placeholder="예: 중앙대 출발 버스" />
+              </div>
+              <div class="field">
+                <label for="emergencyName">비상연락처 이름<span class="req">*</span><span class="en">Emergency contact name</span></label>
+                <input id="emergencyName" name="비상연락처 이름" required placeholder="예: 친구/보호자 이름" />
+              </div>
+              <div class="field">
+                <label for="emergencyPhone">비상연락처 번호<span class="req">*</span><span class="en">Emergency contact phone</span></label>
+                <input id="emergencyPhone" name="비상연락처 번호" required inputmode="tel" placeholder="010-0000-0000" />
+              </div>
+            </div>
+            <div class="grid-2" style="margin-top:15px;">
+              <div class="field">
+                <label for="waterProgram">희망 수상 체험<span class="en">Preferred water program</span></label>
+                <select id="waterProgram" name="희망 수상 체험">
+                  <option>현장 상황에 따라 배정 가능</option>
+                  <option>카약</option>
+                  <option>카누</option>
+                  <option>패들보드</option>
+                  <option>제트스키</option>
+                  <option>수상 체험 미희망</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="meal">식사 관련 요청<span class="en">Meal request</span></label>
+                <select id="meal" name="식사 요청">
+                  <option>특이사항 없음</option>
+                  <option>채식</option>
+                  <option>할랄/종교식 고려 필요</option>
+                  <option>알레르기 있음</option>
+                  <option>기타 요청</option>
+                </select>
+              </div>
+            </div>
+            <div class="field" style="margin-top:15px;">
+              <label for="health">알레르기·복용약·건강 유의사항<span class="en">Allergy / medication / health notes</span></label>
+              <textarea id="health" name="건강 유의사항" placeholder="예: 땅콩 알레르기, 멀미약 필요, 수영 불가 등 / 없으면 ‘없음’"></textarea>
+              <div class="hint">안전관리 목적 외 용도로 사용하지 않습니다.</div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span class="num">3</span>참가비 입금 확인</legend>
+            <div class="grid-3">
+              <div class="field">
+                <label for="payer">입금자명<span class="req">*</span><span class="en">Depositor name</span></label>
+                <input id="payer" name="입금자명" required placeholder="실제 입금자명" />
+              </div>
+              <div class="field">
+                <label for="paymentStatus">입금 상태<span class="req">*</span><span class="en">Payment status</span></label>
+                <select id="paymentStatus" name="입금 상태" required>
+                  <option value="">선택</option>
+                  <option>입금 완료</option>
+                  <option>입금 예정</option>
+                  <option>운영진 확인 필요</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="paymentDate">입금일<span class="en">Payment date</span></label>
+                <input id="paymentDate" name="입금일" type="date" />
+              </div>
+            </div>
+            <div class="privacy-box" id="account">
+              <strong>참가비 15,000원 입금 계좌</strong><br />
+              신협 <strong>135-000-128981</strong> / 예금주: <strong>시니어스포츠산업진흥원</strong><br />
+              입금자명은 신청자 이름과 동일하게 입력해주세요. 다른 이름으로 입금한 경우 ‘비고’에 남겨주세요.
+            </div>
+            <div class="field" style="margin-top:15px;">
+              <label for="memo">비고<span class="en">Memo</span></label>
+              <textarea id="memo" name="비고" placeholder="운영진에게 전달할 내용이 있으면 입력해주세요."></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset id="privacy">
+            <legend><span class="num">4</span>개인정보 활용 동의</legend>
+            <div class="privacy-box">
+              <strong>개인정보 수집·이용 안내</strong><br />
+              수집 주체: 시니어스포츠산업진흥원<br />
+              수집 항목: 성명, 생년월일, 성별, 국적, 연락처, 이메일, 소속/학교, 학과/전공, 버스 탑승 정보, 비상연락처, 건강 유의사항, 입금자명 및 입금 확인 정보<br />
+              이용 목적: 행사 참가자 확인, 공지 전달, 차량 탑승 명단 관리, 안전관리, 참가비 확인, 행사 운영 및 결과 정리<br />
+              보유 기간: 행사 종료 후 30일 이내 파기. 단, 정산·민원 대응 등 필요한 최소 정보는 관련 목적 달성 시까지 보관 후 파기할 수 있습니다.<br />
+              동의를 거부할 권리가 있으나, 필수 항목 미동의 시 행사 참여 확인 및 안전관리 진행이 어려울 수 있습니다.
+            </div>
+            <div class="checks" style="margin-top:12px;">
+              <div class="check">
+                <input id="agreePrivacy" type="checkbox" required />
+                <label for="agreePrivacy">개인정보 수집·이용에 동의합니다.<span class="req">*</span><p>I agree to the collection and use of my personal information for event operation.</p></label>
+              </div>
+              <div class="check">
+                <input id="agreeThird" type="checkbox" required />
+                <label for="agreeThird">행사 운영을 위해 중앙대학교, 차량/보험/행사 운영 관계자 등 필요한 범위 내 관계자에게 정보가 제공될 수 있음에 동의합니다.<span class="req">*</span><p>Information may be shared only with necessary event-related parties for operation and safety.</p></label>
+              </div>
+              <div class="check">
+                <input id="agreePhoto" type="checkbox" />
+                <label for="agreePhoto">사진·영상 촬영 및 결과보고·홍보 활용에 동의합니다.<p>Optional. Refusal does not limit participation. 행사 기록, 결과보고, SNS/웹/인쇄물 홍보 등에 활용될 수 있습니다.</p></label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="actions">
+            <button class="primary" type="submit" id="submitBtn">신청하기</button>
+            <button class="ghost" type="reset" id="resetBtn">초기화</button>
+          </div>
+          <div class="hint" style="margin-top:10px;">필수 항목을 모두 작성한 뒤 신청하기를 누르면 접수 정보가 구글 스프레드시트로 전송됩니다.</div>
+        </form>
+
+        <aside class="side">
+          <div class="side-card account">
+            <h3 style="color:#fff;">입금 계좌</h3>
+            <div class="bank">신협 / Credit Union</div>
+            <div class="num-text">135-000-128981</div>
+            <div class="holder">예금주: 시니어스포츠산업진흥원</div>
+            <div style="margin-top:14px; font-size:13px; opacity:.9; font-weight:800;">참가비 15,000원</div>
+          </div>
+          <div class="side-card">
+            <h3>체크리스트</h3>
+            <div class="pill-list">
+              <span class="pill">참가자 정보</span>
+              <span class="pill">비상연락처</span>
+              <span class="pill">버스 탑승</span>
+              <span class="pill">건강 유의사항</span>
+              <span class="pill">참가비 입금</span>
+              <span class="pill">개인정보 동의</span>
+            </div>
+          </div>
+          <div class="side-card">
+            <h3>행사 흐름</h3>
+            <div class="timeline">
+              <div class="time-row"><div class="time">09:00</div><div class="time-title">중앙대 출발</div></div>
+              <div class="time-row"><div class="time">11:00</div><div class="time-title">축제장 도착 및 무대 프로그램</div></div>
+              <div class="time-row"><div class="time">12:00</div><div class="time-title">점심식사</div></div>
+              <div class="time-row"><div class="time">13:00</div><div class="time-title">축제 프로그램 참여</div></div>
+              <div class="time-row"><div class="time">15:00</div><div class="time-title">수상 어트랙션 체험</div></div>
+              <div class="time-row"><div class="time">17:30</div><div class="time-title">서울로 복귀</div></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    © 시니어스포츠산업진흥원. 본 페이지는 행사 참가자 정보 정리 및 운영 안내 목적의 단일 HTML 파일입니다.
+  </footer>
+  <div class="toast" id="toast">완료되었습니다.</div>
+
+  <script>
+    // Google Sheets 자동 저장용 Google Apps Script Web App URL입니다.
+    // 신청하기 버튼을 누르면 아래 주소로 참가자 정보가 전송됩니다.
+    const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwupGgH0flFhVZU5adnPuO-feoUWvLDX3SJK8LJDwBUh6mAZltonXRBUu3dVLeDKunQ/exec";
+
+    const form = document.getElementById('participantForm');
+    const toast = document.getElementById('toast');
+    const submitBtn = document.getElementById('submitBtn');
+
+    function showToast(message, duration = 2200) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), duration);
+    }
+
+    function getFieldLabel(el) {
+      if (el.id) {
+        const label = document.querySelector(`label[for="${el.id}"]`);
+        if (label) {
+          const clone = label.cloneNode(true);
+          clone.querySelectorAll('.en, .req, p').forEach(node => node.remove());
+          return clone.textContent.trim().replace(/\s+/g, ' ');
+        }
+      }
+      return el.name || '필수 항목';
+    }
+
+    function getInvalidReason(el) {
+      if (el.validity.valueMissing) return '작성 필요';
+      if (el.validity.typeMismatch) return '형식 확인';
+      if (el.validity.patternMismatch) return '형식 확인';
+      return '확인 필요';
+    }
+
+    function validateBeforeSubmit() {
+      const invalidFields = Array.from(form.querySelectorAll('input, select, textarea'))
+        .filter(el => el.willValidate && !el.checkValidity());
+
+      if (invalidFields.length === 0) return true;
+
+      const first = invalidFields[0];
+      const list = invalidFields
+        .slice(0, 8)
+        .map(el => `- ${getFieldLabel(el)}: ${getInvalidReason(el)}`)
+        .join('\n');
+      const more = invalidFields.length > 8 ? `\n외 ${invalidFields.length - 8}개 항목을 추가로 확인해주세요.` : '';
+
+      alert(`작성되지 않았거나 형식이 맞지 않는 항목이 있습니다.\n\n${list}${more}\n\n해당 항목을 작성한 뒤 다시 신청해주세요.`);
+      first.scrollIntoView({ behavior:'smooth', block:'center' });
+      setTimeout(() => {
+        first.focus({ preventScroll:true });
+        first.reportValidity();
+      }, 250);
+      return false;
+    }
+
+    function formDataObject() {
+      const data = new FormData(form);
+      const obj = {};
+      for (const [key, value] of data.entries()) obj[key] = String(value || '').trim();
+
+      obj['개인정보 수집·이용 동의'] = document.getElementById('agreePrivacy').checked ? '동의' : '미동의';
+      obj['제3자 제공 동의'] = document.getElementById('agreeThird').checked ? '동의' : '미동의';
+      obj['사진·영상 활용 동의'] = document.getElementById('agreePhoto').checked ? '동의' : '미동의';
+      obj['접수 생성일시'] = new Date().toLocaleString('ko-KR');
+      obj['행사명'] = '제20회 철원 화강 다슬기축제 중앙대학교 외국인 유학생 초청 행사';
+      obj['접수기간'] = obj['접수기간'] || '2026. 07. 06.(월) ~ 07. 20.(월)';
+      obj['참가비'] = '15,000원';
+      obj['입금계좌'] = '신협 135-000-128981 시니어스포츠산업진흥원';
+      obj['사용자 환경'] = navigator.userAgent || '';
+      obj['접수번호'] = makeReceiptNumber(obj);
+      return obj;
+    }
+
+    function makeReceiptNumber(obj) {
+      const base = (obj['성명'] || 'NONAME').replace(/\s+/g, '').slice(0, 8).toUpperCase();
+      const ymd = new Date().toISOString().slice(0,10).replaceAll('-', '');
+      const rand = Math.random().toString(36).slice(2,6).toUpperCase();
+      return `CAU-${ymd}-${base}-${rand}`;
+    }
+
+    async function submitToGoogleSheets(obj) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 18000);
+
+      try {
+        const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+          body: JSON.stringify(obj),
+          signal: controller.signal
+        });
+
+        clearTimeout(timer);
+
+        let payload = null;
+        const text = await response.text();
+        try { payload = text ? JSON.parse(text) : null; } catch (e) { payload = null; }
+
+        if (!response.ok) {
+          throw new Error(`서버 응답 오류: ${response.status}`);
+        }
+        if (payload && payload.ok === false) {
+          throw new Error(payload.message || '저장 실패');
+        }
+        return payload || { ok:true };
+      } catch (error) {
+        clearTimeout(timer);
+        throw error;
+      }
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (!validateBeforeSubmit()) return;
+
+      const obj = formDataObject();
+      localStorage.setItem('cau_dasulgi_form', JSON.stringify(obj));
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = '전송 중...';
+      showToast('신청 정보를 전송 중입니다...', 1800);
+
+      try {
+        await submitToGoogleSheets(obj);
+        alert(`신청이 완료되었습니다.\n\n접수번호: ${obj['접수번호']}\n구글 스프레드시트에 접수 정보가 전송되었습니다.`);
+        showToast('신청이 완료되었습니다.');
+      } catch (error) {
+        console.error(error);
+        alert('신청 전송에 실패했습니다.\n\n인터넷 연결, Apps Script 배포 권한, 스프레드시트 연결 상태를 확인한 뒤 다시 신청해주세요.');
+        showToast('전송 실패. 다시 시도해주세요.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = '신청하기';
+      }
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      setTimeout(() => {
+        localStorage.removeItem('cau_dasulgi_form');
+        showToast('초기화되었습니다.');
+      }, 0);
+    });
+
+    // 브라우저에 임시 저장된 값 복원
+    try {
+      const saved = JSON.parse(localStorage.getItem('cau_dasulgi_form') || 'null');
+      if (saved) {
+        for (const [key, value] of Object.entries(saved)) {
+          const el = Array.from(form.elements).find(x => x.name === key);
+          if (el && value) el.value = value;
+        }
+        document.getElementById('agreePrivacy').checked = saved['개인정보 수집·이용 동의'] === '동의';
+        document.getElementById('agreeThird').checked = saved['제3자 제공 동의'] === '동의';
+        document.getElementById('agreePhoto').checked = saved['사진·영상 활용 동의'] === '동의';
+      }
+    } catch (e) {}
+  </script>
+</body>
+</html>
